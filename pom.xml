@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.geekster.weeklytest.project</groupId>
+	<artifactId>Job-Search-Portal</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Job Search Portal</name>
+	<description>&quot;An enterprise-ready Spring Boot application for managing job listings. This project includes CRUD operations, custom queries, and validation for job entities. It utilizes an H2 in-memory database for data storage and provides RESTful endpoints for job management for access control. Explore job listings, update titles, and search for specific jobs with ease.</description>
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Swagger Dependencies -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<!-- Jakarta Validation API -->
+		<!-- https://mvnrepository.com/artifact/org.glassfish/jakarta.el -->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>jakarta.el</artifactId>
+			<version>5.0.0-M1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
